@@ -174,10 +174,10 @@ function animate() {
 
   // player movement
 
-  if (keys.a.pressed && player.lastKey === 'a') {
+  if (keys.a.pressed && player.lastKey === 'a' && player.position.x > -250) {
     player.velocity.x = -5
     player.switchSprite('run')
-  } else if (keys.d.pressed && player.lastKey === 'd') {
+  } else if (keys.d.pressed && player.lastKey === 'd' && player.position.x < 700) {
     player.velocity.x = 5
     player.switchSprite('run')
   } else {
@@ -192,10 +192,10 @@ function animate() {
   }
 
   // Enemy movement
-  if (keys.ArrowLeft.pressed && enemy.lastKey === 'ArrowLeft') {
+  if (keys.ArrowLeft.pressed && enemy.lastKey === 'ArrowLeft' && enemy.position.x > -250) {
     enemy.velocity.x = -5
     enemy.switchSprite('run')
-  } else if (keys.ArrowRight.pressed && enemy.lastKey === 'ArrowRight') {
+  } else if (keys.ArrowRight.pressed && enemy.lastKey === 'ArrowRight' && enemy.position.x < 700 ) {
     enemy.velocity.x = 5
     enemy.switchSprite('run')
   } else {
