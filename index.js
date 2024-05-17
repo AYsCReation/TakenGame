@@ -35,15 +35,11 @@ const player = new Fighter({
     x: 0,
     y: 0
   },
-  offset: {
-    x: 0,
-    y: 0
-  },
   imageSrc: './img/samuraiMack/Idle.png',
   framesMax: 8,
   scale: 2.5,
   offset: {
-    x: 215,
+    x: -50,
     y: 157
   },
   sprites: {
@@ -96,15 +92,11 @@ const enemy = new Fighter({
     y: 0
   },
   color: 'blue',
-  offset: {
-    x: -50,
-    y: 0
-  },
   imageSrc: './img/kenji/Idle.png',
   framesMax: 4,
   scale: 2.5,
   offset: {
-    x: 215,
+    x: -50,
     y: 167
   },
   sprites: {
