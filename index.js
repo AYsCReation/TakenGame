@@ -261,6 +261,7 @@ function animate() {
 
 animate()
 
+
 window.addEventListener('keydown', (event) => {
   if (!player.dead) {
     switch (event.key) {
@@ -273,7 +274,7 @@ window.addEventListener('keydown', (event) => {
         player.lastKey = 'a'
         break
       case 'w':
-        player.velocity.y = -20
+        player.position.y === 330 ? player.velocity.y = -20 : player.velocity.y += gravity
         break
       case ' ':
         player.attack()
@@ -292,7 +293,7 @@ window.addEventListener('keydown', (event) => {
         enemy.lastKey = 'ArrowLeft'
         break
       case 'ArrowUp':
-        enemy.velocity.y = -20
+        enemy.position.y === 330 ? enemy.velocity.y = -20 : enemy.velocity.y += gravity
         break
       case 'ArrowDown':
         enemy.attack()
